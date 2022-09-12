@@ -1,19 +1,20 @@
 public class AnimalSounds extends Animals {
     
    //how to write a constructor for a subclass
+    public AnimalSounds(int age, String name, String size) {
+        super(age, name, size);
+    }
 
-
-
-    public void Sound(String name){
+    public void Sound(){
         
         int ref;
-        if (name == "Horse") {
+        if (this.name == "Horse") {
             ref = 1;
         }
-        else if (name == "Dog") {
+        else if (this.name == "Dog") {
             ref = 2;
         }
-        else if (name == "Cow") { 
+        else if (this.name == "Cow") { 
             ref = 3;
         }
         else {
