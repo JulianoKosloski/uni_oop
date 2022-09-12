@@ -1,12 +1,13 @@
 
+public class ClimbingRoutes { // a public class can be acessed by all other classes, unlike default, which
+                              // restricts acess to the same package
 
-public class ClimbingRoutes { //a public class can be acessed by all other classes, unlike default, which restricts acess to the same package
-
-    private String name,firstAscentBy,firstAscentWhen,subGrade,fullGrade,location, type;
+    private String name, firstAscentBy, firstAscentWhen, subGrade, fullGrade, location, type;
     private int mainGrade;
 
-    //constructor
-    public ClimbingRoutes(String name, String firstAscentBy,String firstAscentWhen,int mainGrade,String subGrade,String location, String type){
+    // constructor
+    public ClimbingRoutes(String name, String firstAscentBy, String firstAscentWhen, int mainGrade, String subGrade,
+            String location, String type) {
         this.name = name;
         this.firstAscentBy = firstAscentBy;
         this.firstAscentWhen = firstAscentWhen;
@@ -17,21 +18,23 @@ public class ClimbingRoutes { //a public class can be acessed by all other class
         this.type = type;
     }
 
-    public void description() { //a public method can only be acessed through class objects
-        
-        String description = "The route " + this.name + " was first climbed on " +  this.firstAscentWhen + " by " + this.firstAscentBy + " and is located in " + this.location + ".\nThe " + this.type +  " suggested grade is " + this.fullGrade + ".\n";
+    public void description() { // a public method can only be acessed through class objects
+
+        String description = "The route " + this.name + " was first climbed on " + this.firstAscentWhen + " by "
+                + this.firstAscentBy + " and is located in " + this.location + ".\nThe " + this.type
+                + " suggested grade was " + this.fullGrade + ".\n";
         System.out.println(description);
 
     }
 
-    private String difficulty(){ //a private method can only be acessed inside the class
+    private String difficulty() { // a private method can only be acessed inside the class
 
         String diff = (this.mainGrade > 7) ? "hard" : "not hard";
 
         return diff;
     }
 
-    public boolean isHard(){
+    public boolean isHard() {
 
         String diff = this.difficulty();
         System.out.println(diff);
@@ -41,65 +44,66 @@ public class ClimbingRoutes { //a public class can be acessed by all other class
         return result;
     }
 
-    //to achieve encapsulation, it is important to provide get and set methods, as well as to make attributes private
+    // to achieve encapsulation, it is important to provide get and set methods, as
+    // well as to make attributes private
 
-    //------------------------------------------------GETTERS SETTERS
-    public String getName() { //getter
+    // ------------------------------------------------GETTERS SETTERS
+    public String getName() { // getter
         return this.name;
     }
 
-    public void setName(String newName) { //setter
+    public void setName(String newName) { // setter
         this.name = newName;
     }
 
-    public String getFirstAscentBy() { //getter
+    public String getFirstAscentBy() { // getter
         return this.firstAscentBy;
     }
 
-    public void setFirstAscentBy(String newFirstAscentBy) { //setter
+    public void setFirstAscentBy(String newFirstAscentBy) { // setter
         this.firstAscentBy = newFirstAscentBy;
     }
 
-    public String getFirstAscentWhen() { //getter
+    public String getFirstAscentWhen() { // getter
         return this.firstAscentWhen;
     }
 
-    public void setFirstAscentWhen(String newFirstAscentWhen) { //setter
+    public void setFirstAscentWhen(String newFirstAscentWhen) { // setter
         this.firstAscentWhen = newFirstAscentWhen;
     }
 
-    public int getMainGrade() { //getter
+    public int getMainGrade() { // getter
         return this.mainGrade;
     }
 
-    public void setMainGrade(int newMainGrade) { //setter
+    public void setMainGrade(int newMainGrade) { // setter
         this.mainGrade = newMainGrade;
         this.fullGrade = newMainGrade + subGrade;
     }
 
-    public String getSubGrade() { //getter
+    public String getSubGrade() { // getter
         return this.subGrade;
     }
 
-    public void setSubGrade(String newSubGrade) { //setter
+    public void setSubGrade(String newSubGrade) { // setter
         this.subGrade = newSubGrade;
         this.fullGrade = mainGrade + newSubGrade;
     }
 
-    public String getType() { //getter
+    public String getType() { // getter
         return this.type;
     }
 
-    public void setType(String newType) { //setter
+    public void setType(String newType) { // setter
         this.type = newType;
     }
 
-    public String getLocation() { //getter
+    public String getLocation() { // getter
         return this.name;
     }
 
-    public void setLocation(String newLocation) { //setter
+    public void setLocation(String newLocation) { // setter
         this.location = newLocation;
     }
-    //------------------------------------------------
+    // ------------------------------------------------
 }
