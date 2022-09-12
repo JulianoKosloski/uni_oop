@@ -28,6 +28,7 @@ public class ClimbApp {
         quiet.setMainGrade(9); //using setter method to update attribute
         quiet.description();
 
+        // user inputs their climber name
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your climber name: ");
         String climberName = input.nextLine();
