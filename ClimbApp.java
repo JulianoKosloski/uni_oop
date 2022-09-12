@@ -17,9 +17,13 @@ public class ClimbApp {
         ClimbingRoutes mimosa = new ClimbingRoutes("Mimosa", "Bob Odenkirk", "05/05/2005", 7, "b+", "Curitiba, Brazil", "boulder");
         mimosa.description();
 
+        ClimbingRoutes acordado = new ClimbingRoutes("Acordado", "Balu, o Orangotango", "22/07/2015", 9, "a", "Olinda, Brazil", "route");
+        acordado.description();
+
         biscoito.isHard();
         mimosa.isHard();
         quiet.isHard();
+        acordado.isHard();
 
         quiet.setMainGrade(9); //using setter method to update attribute
         quiet.description();
