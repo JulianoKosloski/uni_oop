@@ -3,7 +3,7 @@ public class ClimbingRoutes { // a public class can be acessed by all other clas
                               // restricts acess to the same package
 
     private String name, firstAscentBy, firstAscentWhen, subGrade, fullGrade, location, type;
-    private int mainGrade;
+    private int mainGrade; // use the 'protected' keyword if you want to use this attribute with class inheritance
 
     // constructor
     public ClimbingRoutes(String name, String firstAscentBy, String firstAscentWhen, int mainGrade, String subGrade,
