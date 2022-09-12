@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        AnimalSounds test_cow = new AnimalSounds(23, "Cow", "Giant");
+        AnimalSounds test_cow = new AnimalSounds(23, "Cow", "Giant", "Mooooooooyeah!");
         test_cow.Sound();
 
         // this is a ternary operator --- variable = (condition) ? expressionTrue :  expressionFalse;

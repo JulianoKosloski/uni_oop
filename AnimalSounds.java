@@ -1,42 +1,16 @@
 public class AnimalSounds extends Animals {
     
+    String sound;
    //how to write a constructor for a subclass
-    public AnimalSounds(int age, String name, String size) {
+    public AnimalSounds(int age, String name, String size, String sound) {
         super(age, name, size);
+        this.sound = sound;
     }
 
-    public void Sound(){
-        
-        int ref;
-        if (this.name == "Horse") {
-            ref = 1;
-        }
-        else if (this.name == "Dog") {
-            ref = 2;
-        }
-        else if (this.name == "Cow") { 
-            ref = 3;
-        }
-        else {
-            ref = 0;
-        }
-
-    switch(ref) {
-
-        case 1:
-            System.out.println("Horse says ihiririri");
-            break;
-        case 2:
-            System.out.println("Dog says bok bok");
-            break;
-        case 3:
-            System.out.println("Cow says Moooo");
-            break;
-        default:
-            System.out.println("I don't know this animal.");
-    }
-
+    public void Sound() {
+        System.out.println(this.name + " says " + this.sound);
     }
 
 }
+
 
